@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>10 + 50 = <span id="question">?</span></h1>
+<input type="button" value="결과보기" onclick="printResult()"/><!-- on~할떄 onchange 바뀌었을떄.버튼을 클릭하면 onclick="printResult()"을 호출-->
+<script> /* onclick="javascript:printResult()"이렇게 써도   되고  onclick="printResult()" 이렇게 써도된다. */
+/*sum 만들기.. 인자 2개받아서 합을 리턴해주면 된다. */
+function sum(x,y) {	
+	return x+y;
+}
+
+function printResult(){
+	var result = sum(10,50);
+
+	var myTag = document.getElementById("question");
+	//alert(myTag); document안에서 //span태그 얻어오기 ==> DOM
+	//alert(myTag.tagName); // 태그를 얻어와라
+	
+	//myTag.innerText = "<font color='red'>" + result + "</font>";
+	myTag.innerHTML = "<font color='red'>" + result + "</font>"; // html형식으로 출력해준다.
+	
+}
+</script>
+</body>
+</html>
+<!-- 
+이벤트 처리
+- 특정한 상황이 발생했을 때, 사용자가 정의하는 특정한 동작(함수)들을 호출되도록 하는 것.
+- Javascript를 사용하는 이유는 <body> 안의 어떠한 태그를 사용자의 이벤트에 반응하도록 제어하기 위함이다.
+
+(1) 이벤트 종류
+1. onBlur - 문서나 윈도우, 프레임세트, 폼 요소에서 현재 입력 포커스가 사라질 때
+2. onClick - 링크, 이미지맵 영역, 폼 요소가 클릭되었을 때
+3. onFocus - 문서나 윈도우, 프레임세트, 폼 요소에서 현재 입력 포커스가 놓였을 때
+4. onLoad - 이미지, 문서, 프레임이 로드될 때
+5. onMouseOver - 태그의 요소 위로 마우스 커서가 들어갈 때
+6. onMouseOut - 태그의 요소 위에서 마우스 커서가 빠져나갈 때
+
+(2) 제어대상 지정
+- 태그의 id로 제어할 특정 태그를 지정한다.
+  document.getElementById("아이디") 로 자바스크립트로 태그를 가져온다.
+
+ -->

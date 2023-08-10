@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!--[ 김찬영  2023-08-9 오후 03:46:43 ]  -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+//증감 연산자
+let num = 5;
+
+num++; /* 후행! */
+document.write("num = " + num + "<br>");
+/* num = num +2  */ /* num +=2   이항연산자*/ 
+/* num = num + 1 3항 연산자 ==> num += 1 ((2항연산자)) ==> ++num 선행 or num++ 후행 ((단항연산자))  */
+
+num++;
+document.write("num = " + num + "<br>");
+
+++num;
+document.write("num = " + num + "<br>");
+
+let num3 = ++num; //선행
+let num2 = num;
+//num++;
+//let num3 = num
+document.write("num = " + num + "&emsp; num3 = " + num3 + "<br>");
+
+let num4 = ++num2*num3--; 
+// ++num 먼저 num3-- 나중에
+document.write("num2 = " + num2 
+		+"&emsp; num3 = " + num3
+		+"&emsp; num4 = " + num4 + "<br>");
+
+</script>
+
+</body>
+</html>
